@@ -13,22 +13,23 @@ def mainProgram():
         try:
             print("Hello there! Let's work with lists")
             print("Choose from the follow options. Type a number below")
-            choice = input("1. Add to a list , 2. Return the value at an index position! 3. Random Search , 4. Add a bunch of numbers , 5 print contents of list , 6. Qqquit program    ")
+            choice = input("1. Add to a list , 2. Return the value at an index position! 3. Random Search , 4. Add a bunch of numbers , 5 linear search , 6.print my list , 7. quit  ")
             if choice == "1":
                     addToList()
             elif choice == "2":
-                    indexValues()
+                indexValues()
             elif choice == "3":
                 randomSearch()
             elif choice == "4":
-                
+                addABunch()
             elif choice == "5":
+                linearSearch()
+            elif choice == "6":
                 print(myList)
             else:
                 break
         except:
             print("Oopsy Daisy! You made a mistake. Try Again?  ")
-            #TO ADD: 1. A way to loop the action, 2. A way to quit, 3. Think of repitition
 
 def addToList():
     print("Adding to a list, Great Choice!")
@@ -50,7 +51,7 @@ def indexValues():
 
 def linearSearch():
     print("We're gonna check out each item on at a time in your list! This sucks.")
-    searchItem = input("What you lookin for partner?    ")
+    searchItem = input("What you lookin for?    ")
     for x in range (len(myList)):
         if myList [x] == int(searchItem):
             print("Your item is at index position {}".format(x))
