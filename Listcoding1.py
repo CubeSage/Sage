@@ -8,6 +8,7 @@ Program Goals:
 
 """
 myList = []
+uniqueList[] 
 def mainProgram():
     while True:
         try:
@@ -25,7 +26,7 @@ def mainProgram():
             elif choice == "5":
                 linearSearch()
             elif choice == "6":
-                print(myList)
+                sortList(myList)
             else:
                 break
         except:
@@ -44,6 +45,16 @@ def addABunch():
         myList.append(random.randint(0, int(numRange)))
     print("Your list is now complete.")
 
+def sortList(myList):
+    for x in myList:
+        if x not in uniqueList:
+            uniqueList.append(x)
+        uniqueList.sort()
+        if showMe = input("Wanna see your new list?   ")
+        if showMe.lower() == "y":
+            print(uniqueList)
+            
+    
 def indexValues():
     print("Oooooh! I heard you need a particular piece of data")
     inputPos = input("What index position are you curious about?   ")
@@ -55,6 +66,15 @@ def linearSearch():
     for x in range (len(myList)):
         if myList [x] == int(searchItem):
             print("Your item is at index position {}".format(x))
+
+def printLists():
+    if len(uniqueList) == 0:
+        print(myList)
+    else:
+        whichOne = input("Would you like sorted or unsorted?  ")
+            print(uniqueList)
+        else:
+            print(myList)
 
 if __name__ == "__main__":
     mainProgram()
