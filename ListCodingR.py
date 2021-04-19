@@ -1,3 +1,8 @@
+#Create new list
+
+
+
+
 myList = []
 uniqueList = []
 import random
@@ -7,7 +12,8 @@ def mainProgram():
         try:
             print("Hello, there! Let's work with lists!")
             print("Choose from the following options, Type a number below!")
-            choice = input("""1. add to a list or
+            choice = input("""0. Create a List
+1. add to a list 
 2. add a bunch of numbers
 3. return the value at an index position
 4. random search
@@ -17,7 +23,9 @@ def mainProgram():
 8. recursive binary search
 9. iterative binary search
 10. quit program""")
-            if choice == "1":
+            if choice == "0":
+                myList()
+            elif choice == "1":
                 addToList()
             elif choice == "2":
                 addABunch()
@@ -41,11 +49,17 @@ def mainProgram():
                     print("your number is at index position {}".format(result))
                 else:
                     print("your number is not found in that list, bud!")
+            
             else:
                 break
         except:
             print("you made a whoopsie!")
-         
+
+
+def myList():
+    myList2 = list("")
+    print("Your list has been created")
+    
 def addToList():
     print("Adding to a list! Great choice!")
     newItem = input("Type an integer here!  ")
