@@ -7,6 +7,8 @@ songList = []
 
 
 def printList():
+
+    
     print(songList)
 
 def exportList():
@@ -21,11 +23,13 @@ def clearWindow():
 def mainMenu():
     clearWindow()
     LMain = Label(top, text = "Block 5 GUI Projects")
-    LMain.grid(column = 0, Row = 1)
-    B1Main = Button(text = week1, bg = "white", command = week1)
-    B1Main.grid(column = 0, row = 1)
-    B2Main = Button(text = week2, bg = "light orange", 
-    B3Main
+    LMain.grid(column = 0, row = 1)
+    B1Main = Button(text = "week 1", bg = "white", command = week1)
+    B1Main.grid(column = 0, row = 2)
+    B2Main = Button(text = "week 2", bg = "white", command = week2)
+    B2Main.grid(column = 0, row = 3)
+    B3Main = Button(text = "week 3", bg = "white", command = week3)
+    B3Main.grid(column = 0, row = 4)
 
 def week1():
     clearWindow()
@@ -33,7 +37,7 @@ def week1():
     L1 = Label(top, text="ourTunes")
     L1.grid(column= 0, row= 1)
     
-        def addTrack():
+    def addTrack():
             songList.append(E1.get())
             E1.delete(0, END)
 
@@ -51,7 +55,7 @@ def week1():
     B3 = Button(text = "Export", bg = "orange", command= exportList)
     B3.grid(column = 1, row = 3)
 
-    B4 = Button(text = "Main Menu", bg = "yellow" command = mainMenu)
+    B4 = Button(text = "Main Menu", bg = "yellow", command = mainMenu)
     B4.grid(column = 0, row = 3)
 
 
@@ -60,30 +64,30 @@ def week2 ():
     #update the variable
         rollTimes = E2W2.get()
         dieType = E1W2.get()
-    #clear window
-    clearWindow()
-    
-        #calculate the dice rolls
+        #clear window
+        clearWindow()
+        
+            #calculate the dice rolls
         for x in range(0, int(rollTimes)):
-            myRolls.append(random.randint(1, int(dieType)))
+                myRolls.append(random.randint(1, int(dieType)))
 
-        #display the rolls and exit button
+            #display the rolls and exit button
         L4W2 = Label(top, text = "Here are your rolls")
         L4W2.grid(column = 0, row = 1)
-        
-        L5W2 = Label(top, text = "{}".format(myRolls)
+            
+        L5W2 = Label(top, text = "{}".format(myRolls))
         L5W2.grid(column = 0, row = 1)
-                     
+                         
         B2W2 = Button(text = "Main Menu", bg = "Yellow", command = mainMenu)
         B2W2.grid(column = 0, row = 2)
 
     clearWindow()
     
     L1W2 = Label(top, text= "Dice Roller App")
-    L1W2.grid(Column = 2, row = 1)
+    L1W2.grid(column = 2, row = 1)
     
     L2W2 = Label(top, text= "# of sides")
-    L2W2.grid(Column = 0, row = 2)
+    L2W2.grid(column = 0, row = 2)
 
     L3W2 = Label(top, text = "# of rolls")
     L3W2.grid(column = 3, row = 2)
@@ -98,7 +102,10 @@ def week2 ():
     B1W2.grid(column = 2, row = 4)
     
     #dont forget grids
+def week3():
+    clearWindow()
     
-if _name_ == "_main_":
+    
+if __name__ == "__main__":
     mainMenu()
     top.mainloop()
